@@ -72,15 +72,11 @@ void *resize(t_hashmap *map){
 	unsigned int count = 0;
 	while (count < map->current_size)
 	{
-		newmap->array[count] = map->array[count];
+		if (map->array[count] != NULL)
+			newmap->array[poor_hash(map->array[count]->key) % newmap->max_size] = map->array[count];
 		count++;
 	}
 	destroy_map(map);
-	while (count < newmap->max_size)
-	{
-		newmap->array[count] = NULL;
-		count++;
-	}
 	map = newmap;
 	return map;
 }
