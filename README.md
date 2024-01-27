@@ -1,5 +1,7 @@
 # Hashmap
 
+WORK IN PROGRESS
+
 This is my implementation of a Hashmap in C. Thanks [Saiago](https://github.com/Grsaiago/hashmapC) for suggesting this little project. I've tried to use as few functions from stdlib as possible.
 
 Disclaimer: I'm experimenting on C code style, I'm used to a style norm made by [42](https://42.fr/en/homepage/), but to discover what I like most I'm trying new stuff, for example, single line if statements.
