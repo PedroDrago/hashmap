@@ -141,7 +141,6 @@ void *get(t_hashmap *hashmap, char *key){
 		current = current->next;
 	return current->value;
 }
-
 /*
 #include <stdio.h>
 typedef struct teste
@@ -156,18 +155,24 @@ int main(void)
 	teste b;
 
 	a.numero = 25;
-	a.string = "funciona";
+	a.string = "it works";
 	a.structs = &b;
-	b.string = "funciona mesmo";
+	b.string = "it really works";
 
-	t_hashmap *pessoa = create_hashmap(30);
+	t_hashmap *pessoa = create_hashmap(50);
 	insert(pessoa, "teste", &a, NONE_MALLOCED);
-	insert(pessoa, "cpf", "192.123.123-21", NONE_MALLOCED);
-	printf("%s\n", (char *) get(pessoa, "cpf"));
 	printf("%i\n", ((teste *) get(pessoa, "teste"))->numero);
 	printf("%s\n", ((teste *) get(pessoa, "teste"))->string);
 	printf("%s\n", ((teste *) get(pessoa, "teste"))->structs->string);
-	printf("%s\n", (char *) get(pessoa, "cpf"));
 	destroy_map(pessoa);
+	t_hashmap *pessoa_collision = create_hashmap(10);
+	printf("This collision example happens with a 10 size array and these 2 strings: \"CPF\" have hash index: %lu | \"Drago\" have hash index: %lu\n", poor_hash("cpf") % pessoa_collision->max_size, poor_hash("Drago") % pessoa_collision->max_size);
+	insert(pessoa_collision, "cpf", "123.123.123-12", NONE_MALLOCED);
+	insert(pessoa_collision, "Drago", "It deals with collision!", NONE_MALLOCED);
+	printf("%s\n", (char *) get(pessoa_collision, "cpf"));
+	printf("%s\n", (char *) get(pessoa_collision, "Drago"));
+	printf("%s\n", (char *) get(pessoa_collision, "cpf"));
+	printf("%s\n", (char *) get(pessoa_collision, "Drago"));
+	destroy_map(pessoa_collision);
 }
 */
