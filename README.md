@@ -1,6 +1,6 @@
 # Hashmap
 
-WORK IN PROGRESS
+🚧 WORK IN PROGRESS 🚧
 
 This is my implementation of a Hashmap in C. Thanks [Saiago](https://github.com/Grsaiago/hashmapC) for suggesting this little project. I've tried to use as few functions from stdlib as possible.
 
