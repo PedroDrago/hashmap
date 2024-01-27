@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 18:59:37 by pdrago            #+#    #+#             */
-/*   Updated: 2024/01/26 22:10:04 by pdrago           ###   ########.fr       */
+/*   Updated: 2024/01/26 23:18:57 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,6 @@
 # define HASHMAP_H
 
 # include <stdlib.h>
-
-# ifndef TRUE
-#  define TRUE 1
-# endif
-
-# ifndef FALSE
-#  define FALSE 0
-# endif
 
 # ifndef NONE_MALLOCED
 #  define NONE_MALLOCED 0
